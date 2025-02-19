@@ -44,7 +44,9 @@ export function SubscriptionForm() {
           </InputRoot>
 
           {errors.name && (
-            <p className="text-danger text-xs font-semibold">{errors.name.message}</p>
+            <p className="text-danger text-xs font-semibold">
+              {errors.name.message}
+            </p>
           )}
         </div>
 
@@ -61,7 +63,9 @@ export function SubscriptionForm() {
           </InputRoot>
 
           {errors.email && (
-            <p className="text-danger text-xs font-semibold">{errors.email.message}</p>
+            <p className="text-danger text-xs font-semibold">
+              {errors.email.message}
+            </p>
           )}
         </div>
       </div>
