@@ -6,6 +6,7 @@ import { subscribeToEvent } from '@/http/api'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { ArrowRight, Mail, User } from 'lucide-react'
 import { useRouter, useSearchParams } from 'next/navigation'
+import { Suspense } from "react"
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 
@@ -14,7 +15,7 @@ const subscriptionSchema = z.object({
   email: z.string().email('Digite um e-mail válido'),
 })
 
-export function SubscriptionForm() {
+function SubscriptionFormContent() {
   const { push } = useRouter()
   const searchParams = useSearchParams()
 
@@ -90,5 +91,13 @@ export function SubscriptionForm() {
         <ArrowRight />
       </Button>
     </form>
+  )
+}
+
+export function SubscriptionForm() {
+  return (
+    <Suspense>
+      <SubscriptionFormContent />
+    </Suspense>
   )
 }
