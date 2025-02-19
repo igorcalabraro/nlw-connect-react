@@ -24,7 +24,7 @@ export default function Home() {
               <h2 className="font-heading font-semibold text-gray-200 text-xl">
                 Sobre o evento
               </h2>
-              <span className="text-purple font-semibold text-xs flex items-center gap-2">
+              <span className="text-purple font-semibold text-xs flex items-center gap-2 transition-transform duration-300 hover:scale-105 hover:animate-pulse">
                 <Radio className="size-5" />
                 AO VIVO
               </span>
